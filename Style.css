@@ -1,0 +1,30 @@
+.Download{
+
+    width: 10em;
+    height: 1em;
+    padding: 1em;
+    background-color: rgb(40, 133, 32);
+    border-width: 0.15em;
+    border-style: solid;
+    border-color: rgb(207, 199, 199);
+    border-radius: 3%;
+
+    margin-top: 16%;
+    margin-left: 16%;
+
+    font-family: "OCR A Std", monospace;
+    line-height: 0em;
+}
+
+.Download:hover{
+    background-color: rgb(171, 230, 60);
+}
+
+
+
+.CaixaLogin{
+
+
+
+
+}
