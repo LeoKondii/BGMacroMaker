@@ -20,11 +20,26 @@
     background-color: rgb(171, 230, 60);
 }
 
+.Borda1{
+    width: 200px;
+    height: 250px;
+    background-color: rgb(219, 219, 219);
+    border-width: 5px;
+    border-style: solid;
+    border-color: rgb(207, 199, 199);
+    position: relative;
+    padding: 1%;
+    margin: 0 auto;
+}
 
-
-.CaixaLogin{
-
-
-
-
+.Borda2{
+    width: 200px;
+    height: 100px;
+    background-color: rgb(219, 219, 219);
+    border-width: 5px;
+    border-style: solid;
+    border-color: rgb(207, 199, 199);
+    position: relative;
+    padding: 1%;
+    margin: 0 auto;
 }
