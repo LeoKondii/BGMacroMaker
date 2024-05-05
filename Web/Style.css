@@ -1,7 +1,11 @@
+body{
+    background-color: #404040;
+}
+
 .Download{
 
-    width: 10em;
-    height: 1em;
+    width: 13em;
+    height: 4em;
     padding: 1em;
     background-color: rgb(40, 133, 32);
     border-width: 0.15em;
@@ -13,12 +17,42 @@
     margin-left: 16%;
 
     font-family: "OCR A Std", monospace;
-    line-height: 0em;
+    font-size: 1em;
+    line-height: 2em;
 }
 
 .Download:hover{
     background-color: rgb(171, 230, 60);
 }
+
+.imgDownload{
+    float: right;
+    width: 3.2em;
+    height: 3.2em;
+
+    position: relative;
+    top: -0.7em;
+}
+
+.container {
+    text-align: center;
+}
+
+.login-cadastro-btn{
+    background-color: #4CAF50;
+    color: white;
+    padding: 15px 30px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 18px;
+    transition: background-color 0.3s ease;
+  }
+  
+  .login-cadastro-btn:hover {
+    background-color: #356637;
+  }
+
 
 .Borda1{
     width: 200px;
@@ -27,9 +61,12 @@
     border-width: 5px;
     border-style: solid;
     border-color: rgb(207, 199, 199);
-    position: relative;
+    position: absolute;
     padding: 1%;
-    margin: 0 auto;
+
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
 }
 
 .Borda2{
@@ -39,7 +76,10 @@
     border-width: 5px;
     border-style: solid;
     border-color: rgb(207, 199, 199);
-    position: relative;
+    position: absolute;
     padding: 1%;
-    margin: 0 auto;
+
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
 }
