@@ -8,20 +8,45 @@
 </head>
 
 <body>
-    <main>
+
+    <div id="header">
+        <div class="container" style="margin-right: 8%;"> 
+            <a href="BGMacroMaker.html" id="logo">
+                <h1 style="color: orange; float: left;">BG</h1> <h1 style="float: left;">MacroMaker</h1>
+                <img style="float: left; width: 4em; height: 4em;" src="Imagens/MainFogo.png" alt="Ícone BGMacroMaker"> <br>
+            </a>
+        </div>
+
+        <div class="container" style="margin: 0.25em;">
+                <button onclick="TelaLogin.html" style="width: auto; margin-right: 6%" class="login-cadastro-btn">Logar</button>
+
+                <button onclick="TelaLogin.html" style="width: auto;" class="login-cadastro-btn">Cadastrar</button>
+        </div>
+    </div>
+
+    <div id="mainCadLog">
         <div class="caixaLogar">
-            <form action="Projeto_web\BGMacroMaker.html">
+            <form action="Projeto_web/BGMacroMaker.html">
                 <label for="email">Email</label><br>
                 <input type="email" id="email" name="email" required><br>
                 <label for="senha">Senha</label><br>
                 <input type="password" id="senha" name="senha" required><br> <br>
-                <div class="container">
+                <div class="containerCadLog">
                     <button style="float: left;" onclick="window.location.href='BGMacroMaker.html'" id="cancelar" name="cancelar">Voltar</button> 
                     <button style="float: right;" onclick="window.location.href='BGMacroMaker.html'" id="logar" name="logar">Logar</button> 
                 </div>
                 
             </form>
         </div>
-    </main>
+    </div>
+
+    <div id="footer">
+        <hr style="border-color: black; height: 0.2em;">
+        <p>Desenvolvido por Leonardo Conde e Matheus Shiune - <a href="https://moodle.utfpr.edu.br/pluginfile.php/3208131/mod_resource/content/1/Projeto%201%20-%20Programação%20Web%20Front-end.pdf"> Projeto 1 Front End </a></p>
+        <p> <a href="https://www.utfpr.edu.br"> Universidade Tecnológica do Paraná </a> - Campus Cornélio Procópio</p>
+        <p>Curso de Engenharia de Software - 2024</p>
+        <p>Contato: <a href="mailto:leonardoconde@alunos.utfpr.edu.br?subject=Assunto&body=Corpo">leonardoconde@alunos.utfpr.edu.br</a></p>
+    </div>
+
 </body>
 </html>

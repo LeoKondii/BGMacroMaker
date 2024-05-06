@@ -11,25 +11,27 @@
 
     <div id="header">
         <div class="container" style="margin-right: 8%;"> 
-            <h1 style="color: orange; float: left;">BG</h1> <h1 style="float: left;">MacroMaker</h1>
-            <img style="float: left; width: 4em; height: 4em;" src="Imagens/MainFogo.png" alt="Ícone BGMacroMaker"> <br>
+            <a href="BGMacroMaker.html" id="logo">
+                <h1 style="color: orange; float: left;">BG</h1> <h1 style="float: left;">MacroMaker</h1>
+                <img style="float: left; width: 4em; height: 4em;" src="Imagens/MainFogo.png" alt="Ícone BGMacroMaker"> <br>
+            </a>
         </div>
 
-        <div class="container" style="margin-top: 0.25em;">
-            <a href="TelaLogin.html" style="width: auto; margin-right: 6%"> 
-                <button class="login-cadastro-btn">Logar</button>
-            </a>
+        <div class="container" style="margin: 0.25em;">
+                <button onclick="TelaLogin.html" style="width: auto; margin-right: 6%" class="login-cadastro-btn">Logar</button>
 
-            <a href="TelaCadastro.html" style="width: auto;"> 
-                <button class="login-cadastro-btn">Cadastrar</button>
-            </a> 
+                <button onclick="TelaLogin.html" style="width: auto;" class="login-cadastro-btn">Cadastrar</button>
         </div>
     </div>
 
-
     <div id="main">
-
         <button class="Download">Download <img class="imgDownload" src="Imagens/IconeDownload.png" alt="Ícone Download"> </button> 
+
+        <div>
+            <img src="Imagens/add.png" alt="Propaganda" id="propaganda">
+            <img src="Imagens/play.png" alt="btnPlay" id="btnPropaganda">
+        </div>
+        
 
         <div class="texto">
             <p> 
@@ -44,16 +46,28 @@
                 O aplicativo também pode ser configurado para continuar clicando até ser parado 
                 ou para clicar apenas um certo número de vezes, e você pode ajustar o intervalo entre os cliques 
                 em horas, minutos, segundos ou milissegundos.
+            </p> 
+            <br><br><br>
+
+            <p> 
+                Nosso projeto foi criado à visão da  
+                <a href="https://www.ipea.gov.br/ods/ods9.html" style="display: inline;">ODS 9 da ONU, "Indústria, inovação e infraestrutura"</a> 
+                    . Ao automatizar tarefas repetitivas que exigem cliques frequentes do mouse e do teclado, o 
+                    BGMacroMaker pode aumentar a eficiência e a produtividade no trabalho. <br> Ao reduzir a necessidade de cliques 
+                    frequentes do mous e do teclado, o BGMacroMaker pode ajudar a prevenir lesões ocupacionais relacionadas ao uso 
+                    excessivo desses dispositivos. Além disso, ao economizar tempo e esforço, os usuários podem experimentar menos 
+                    estresse e melhorar sua saúde e bem-estar no local de trabalho.
+
             </p>
         </div>
     </div>
         
     <div id="footer">
         <hr style="border-color: black; height: 0.2em;">
-        <p>Desenvolvido por Leonardo Conde e Matheus Shiune</p>
-        <p>Universidade Tecnológica do Paraná - Campus Cornélio Procópio</p>
+        <p>Desenvolvido por Leonardo Conde e Matheus Shiune - <a href="https://moodle.utfpr.edu.br/pluginfile.php/3208131/mod_resource/content/1/Projeto%201%20-%20Programação%20Web%20Front-end.pdf"> Projeto 1 Front End </a></p>
+        <p> <a href="https://www.utfpr.edu.br"> Universidade Tecnológica do Paraná </a> - Campus Cornélio Procópio</p>
         <p>Curso de Engenharia de Software - 2024</p>
-        <p>Contato: <a href="mailto:leonardoconde@alunos.utfpr.edu.br">leonardoconde@alunos.utfpr.edu.br</a></p>
+        <p>Contato: <a href="mailto:leonardoconde@alunos.utfpr.edu.br?subject=Assunto&body=Corpo">leonardoconde@alunos.utfpr.edu.br</a></p>
     </div>
 
 </body> 
