@@ -1,5 +1,50 @@
 body{
     background-color: #404040;
+    font-size: 1em;
+    color: white;
+    margin: 0;
+}
+
+#header {
+    height: 4em;
+    background: #222;
+    color: white;
+    padding-left: 10%;
+    padding-right: 10%;
+    display: flex;
+    flex-direction: row;
+  }
+
+#main {
+    min-height: calc(100vh - 15.5em);
+}
+
+#footer {
+    background: #2c1919;
+    text-align: center;
+    padding: 0.5em;
+    margin-top: auto; 
+}
+
+.container {
+    text-align: center;
+    flex: 1;
+    display: flex;
+    justify-content: center;
+}
+
+.texto {
+    margin-left: 4%;
+    margin-top: 4%;
+    justify-content: center;
+    text-align: left;
+    font-size: 1em;
+}
+
+.texto p {
+    margin: 0;
+    max-width: 60%;
+    font-size: 1.2em;
 }
 
 .Download{
@@ -9,12 +54,11 @@ body{
     padding: 1em;
     background-color: rgb(40, 133, 32);
     border-width: 0.15em;
-    border-style: solid;
-    border-color: rgb(207, 199, 199);
     border-radius: 3%;
+    position: absolute;
 
-    margin-top: 16%;
-    margin-left: 16%;
+    margin-top: 3%;
+    margin-left: 68%;
 
     font-family: "OCR A Std", monospace;
     font-size: 1em;
@@ -34,31 +78,30 @@ body{
     top: -0.7em;
 }
 
-.container {
-    text-align: center;
-}
-
 .login-cadastro-btn{
     background-color: #4CAF50;
     color: white;
-    padding: 15px 30px;
+    margin-top: 0.3em;
+    padding: 0.8em 2em;
+    margin-top: 0%;
     border: none;
-    border-radius: 5px;
+    border-radius: 0.25em;
     cursor: pointer;
-    font-size: 18px;
+    font-size: 1.25em;
     transition: background-color 0.3s ease;
+
   }
   
   .login-cadastro-btn:hover {
     background-color: #356637;
   }
 
-
-.Borda1{
-    width: 200px;
-    height: 250px;
+.caixaCadastrar{
+    width: 12em;
+    height: 15em;
     background-color: rgb(219, 219, 219);
-    border-width: 5px;
+    color: #222;
+    border-width: 0.25em;
     border-style: solid;
     border-color: rgb(207, 199, 199);
     position: absolute;
@@ -69,11 +112,12 @@ body{
     transform: translate(-50%, -50%);
 }
 
-.Borda2{
-    width: 200px;
-    height: 100px;
+.caixaLogar{
+    width: 12em;
+    height: 8em;
     background-color: rgb(219, 219, 219);
-    border-width: 5px;
+    color: #222;
+    border-width: 0.25em;
     border-style: solid;
     border-color: rgb(207, 199, 199);
     position: absolute;

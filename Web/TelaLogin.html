@@ -9,13 +9,17 @@
 
 <body>
     <main>
-        <div class="Borda2">
+        <div class="caixaLogar">
             <form action="Projeto_web\BGMacroMaker.html">
                 <label for="email">Email</label><br>
                 <input type="email" id="email" name="email" required><br>
                 <label for="senha">Senha</label><br>
                 <input type="password" id="senha" name="senha" required><br> <br>
-                <button onclick="window.location.href='BGMacroMaker.html'" id="logar" name="logar">Logar</button> 
+                <div class="container">
+                    <button style="float: left;" onclick="window.location.href='BGMacroMaker.html'" id="cancelar" name="cancelar">Voltar</button> 
+                    <button style="float: right;" onclick="window.location.href='BGMacroMaker.html'" id="logar" name="logar">Logar</button> 
+                </div>
+                
             </form>
         </div>
     </main>

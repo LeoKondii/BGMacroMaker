@@ -8,7 +8,7 @@
 </head>
 <body>
     <main>
-        <div class="Borda1">
+        <div class="caixaCadastrar">
             <form action="Projeto_web\TelaLogin.html">
                 <label for="nome">Nome</label><br>
                 <input type="text" id="nome" name="nome" required><br>
@@ -20,7 +20,10 @@
                 <input type="password" id="senha" name="senha" required><br>
                 <label for="senhaC">Confirmar senha</label><br>
                 <input type="password" id="senhaC" name="senhaC" required><br> <br>
-                <button type="submit" id="confirmar" name="confirmar">Confirmar</button>
+                <div class="container">
+                    <button style="float: left;" onclick="window.location.href='BGMacroMaker.html'" id="cancelar" name="cancelar">Voltar</button>
+                    <button style="float: right;" type="submit" onclick="window.location.href='BGMacroMaker.html'" id="confirmar" name="confirmar">Confirmar</button>
+                </div>
             </form>
         </div>
     </main>
