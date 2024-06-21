@@ -15,9 +15,31 @@ function addLista(){
         alert("campos incompletos");
     }else{
     let li = document.createElement("li");
+    let Usuario={
+        nomeUsuario: nomeADM.value,
+        emailUsuario: emailADM.value,
+        id: GID(),
+    }
     li.innerHTML=nome.value+'-'+email.value+'-'+`${day}/${month}/${year} `;
     lista.appendChild(li);
+    emailLS.push(Usuario);
+    localStorage.setItem('Usuarios',JSON.stringify(emailLS));
     }
     email.value="";
     nome.value="";
+}
+
+function GID(){
+    counter++;
+    return counter;
+}
+
+function GID2(){
+    counter2++;
+    return counter2;
+}
+
+function limpaLista(){
+    document.getElementById("nomeADM").value = "";
+    document.getElementById("emailADM").value = "";
 }
