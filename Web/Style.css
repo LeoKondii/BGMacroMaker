@@ -162,3 +162,8 @@ body{
     left: 50%;
     transform: translate(-50%, -77%);
 }
+.checked {
+    background: #888;
+    color: #fff;
+    text-decoration: line-through;
+ }
