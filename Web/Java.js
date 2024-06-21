@@ -5,9 +5,19 @@ let emailLS = [];
 const lista = document.getElementById("LCadastro");
 const email = document.getElementById("emailADM");
 const nome = document.getElementById("nomeADM");
+const date = new Date();
+const year = date.getFullYear();
+const month = String(date.getMonth() + 1).padStart(2, '0');
+const day = String(date.getDate()).padStart(2, '0');
 
 function addLista(){
+    if(email.value ==='' || nome.value===''){
+        alert("campos incompletos");
+    }else{
     let li = document.createElement("li");
-    li.innerText=nome.value;
+    li.innerHTML=nome.value+'-'+email.value+'-'+`${day}/${month}/${year} `;
     lista.appendChild(li);
+    }
+    email.value="";
+    nome.value="";
 }
