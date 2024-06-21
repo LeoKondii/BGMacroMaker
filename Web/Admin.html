@@ -1,11 +1,10 @@
 <!DOCTYPE html>
 <html lang="pt-br">
 <head>
-    <title>Admin</title>
+    <title>Login</title>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="stylesheet" href="Style.css">
-    
 </head>
 
 <body>
@@ -29,29 +28,38 @@
                     <button style="width: auto;" class="login-cadastro-btn">Cadastrar</button>
                 </form>
         </div>
-        <div class="container" style="margin-top: 0.5em;">
-            <form action="Admin.html">
-                <button style="width: auto;" class="login-cadastro-btn">Admin</button>
-            </form>
-        </div>
     </div>
 
     <div id="mainCadLog">
         <div class="caixaLogar">
-            <form action="Projeto_web/TelaLogin.html">
-                <label for="nome">Nome</label><br>
-                <input type="text" id="nome" name="nome" required><br>
+            <form action="Projeto_web/BGMacroMaker.html">
                 <label for="email">Email</label><br>
-                <input type="email" id="email" name="email" required><br>
+                <input type="email" id="emailADM" name="emailADM" required><br>
+                <label for="senha">Senha</label><br>
+                <input type="password" id="senhaADM" name="senhaADM" required><br> <br>
                 <div class="containerCadLog">
-                    <button style="float: right;" name="cadastrar">Cadastrar</button>
-                    <button style="float: left;" onclick="window.location.href='BGMacroMaker.html'" id="cancelar" name="cancelar">Voltar</button>
+                    <button style="float: left;" onclick="window.location.href='BGMacroMaker.html'" id="voltar" name="voltar">Voltar</button> 
+                    <button style="float: right;" onclick="NomeL()" id="cadastrarADM" name="cadastrarADM">Cadastrar</button> 
                 </div>
+                
             </form>
         </div>
     </div>
-    <ul id="itemLista">
-        
-    </ul>
+
+    <ol>
+        <ul id="LCadastro">
+        <li>Teste</li>
+        </ul>
+    </ol>
+
+    <div id="footer">
+        <hr style="border-color: black; height: 0.2em;">
+        <p>Desenvolvido por Leonardo Conde e Matheus Shiune - <a href="https://moodle.utfpr.edu.br/pluginfile.php/3208131/mod_resource/content/1/Projeto%201%20-%20Programação%20Web%20Front-end.pdf"> Projeto 1 Front End </a></p>
+        <p> <a href="https://www.utfpr.edu.br"> Universidade Tecnológica do Paraná </a> - Campus Cornélio Procópio</p>
+        <p>Curso de Engenharia de Software - 2024</p>
+        <p>Contato: <a href="mailto:leonardoconde@alunos.utfpr.edu.br?subject=Assunto&body=Corpo">leonardoconde@alunos.utfpr.edu.br</a></p>
+    </div>
+
+    <script src="Java.js"></script>
 </body>
 </html>

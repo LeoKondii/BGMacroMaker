@@ -47,3 +47,10 @@ function Remover(){
     emailLS.splice(index, 1);
     localStorage.setItem('email', JSON.stringify(emailLS));
 }
+
+function NomeL(){
+    var ul = document.getElementById("emailADM").value;
+    var li = document.createElement("li");
+    li.appendChild(document.createTextNode("Teste 2"));
+    ul.appendChild(li);
+}
