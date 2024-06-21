@@ -1,5 +1,4 @@
 let counter = 0;
-let counter2 = 0;
 let nomesLS = [];
 let emailLS = [];
 const lista = document.getElementById("LCadastro");
@@ -32,11 +31,6 @@ function addLista(){
 function GID(){
     counter++;
     return counter;
-}
-
-function GID2(){
-    counter2++;
-    return counter2;
 }
 
 function limpaLista(){
