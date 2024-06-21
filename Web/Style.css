@@ -5,12 +5,16 @@ body{
     margin: 0;
 }
 
+a {
+    color: white; 
+}
+
 #header {
     height: 4.5em;
     background: #222;
     color: white;
-    padding-left: 10%;
-    padding-right: 10%;
+    padding-left: 4%;
+    padding-right: 3%;
     display: flex;
     flex-direction: row;
   }
@@ -26,7 +30,7 @@ body{
 #footer {
     background: #222;
     text-align: center;
-    padding: 0.5em;
+    padding: 0.5em; 
     margin-top: auto; 
 }
 
@@ -37,17 +41,34 @@ body{
     align-items: center;
 }
 
-
 .container {
     text-align: center;
     flex: 1;
     display: flex; 
-    justify-content:center;
+    justify-content: center;
 }
 
 .containerCadLog {
     text-align: center;
     flex: 1;
+}
+
+.containerLogo{
+    text-align: left;
+    justify-content: left;
+}
+
+.containerBtn{
+    text-align: center;
+    display: flex; 
+    justify-content: center;
+}
+
+.BGText {
+    background: linear-gradient(to right, #fa794f, #f54374);
+    display: inline;
+    background-clip: text; 
+    color: transparent; 
 }
 
 .texto {
@@ -96,13 +117,14 @@ body{
 }
 
 .login-cadastro-btn{
-    background-color: #4CAF50;
+    background-color: transparent;
     color: white;
     margin-top: 0.3em;
     padding: 0.8em 2em;
     margin-top: 0%;
-    border: none;
-    border-radius: 0.25em;
+    border-right: none;
+    border-top: none;
+    border-bottom: none;
     cursor: pointer;
     font-size: 1.25em;
     transition: background-color 0.3s ease;
