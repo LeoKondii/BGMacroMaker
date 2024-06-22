@@ -2,6 +2,8 @@ let counter = 0;
 const lista = document.getElementById("LCadastro");
 const email = document.getElementById("emailADM");
 const nome = document.getElementById("nomeADM");
+const emailCa = document.getElementById("emailC");
+const nomeCa = document.getElementById("nomeC");
 const pesq = document.getElementById("pesquisa");
 const date = new Date();
 const year = date.getFullYear();
@@ -27,6 +29,24 @@ function addLista(){
     email.value="";
     nome.value="";
 }
+
+function addListaCadastro(){
+    if(emailCa.value ==='' || nomeCa.value===''){
+        alert("campos incompletos");
+    }else{
+        let Usuario={
+            nomeUsuario: nomeC.value,
+            emailUsuario: emailC.value,
+            id: GID(),
+        }
+        let json = JSON.parse(localStorage.getItem("Usuarios")) || [];
+        json.push(Usuario);
+        localStorage.setItem('Usuarios',JSON.stringify(json));
+    }
+    emailCa.value="";
+    nomeCa.value="";
+}
+
 function carregaLista(){
     let json = JSON.parse(localStorage.getItem("Usuarios")) || [];
     for( var i = 0; i<json.length; i++){
