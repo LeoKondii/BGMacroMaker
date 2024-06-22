@@ -36,8 +36,6 @@ a {
     bottom: 0;
     position: fixed;
     font-size: small;
-
-/* teste */
     width:100%;
     bottom: 0;
 }
@@ -72,16 +70,16 @@ a {
     justify-content: center;
 }
 
-.containerAdm{
+.containerLista{
     position: relative;
     text-align: center;
     /*display: flex; 
     justify-content: center;*/
-    transform: translate(0%, 300%);
+    /*transform: translate(0%, 300%);*/
+    margin-top: 2em;
 }
-.containerLista{
-    position: relative;
-    transform: translate(39%, 700%);
+.containerLista ul li{
+    list-style-type: none;
 }
 .BGText {
     background: linear-gradient(to right, #fa794f, #f54374);
@@ -199,13 +197,18 @@ a {
     position: relative;
     padding: 1%;
 
-    top: 50%;
-    left: 50%;
+    margin-top: 10%;
+    margin-left: 43%;
+    /*top: 50%;
+    left: 50%;*/
     /*transform: translate(-50%, -77%);*/
-    transform:translate(-50%, 75%);
+    /*transform:translate(-50%, 75%);*/
 }
 .checked {
     background: #888;
     color: #fff;
     text-decoration: line-through;
  }
+.hidden{
+    display: none !important;
+}

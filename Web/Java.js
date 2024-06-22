@@ -19,7 +19,7 @@ function addLista(){
         emailUsuario: emailADM.value,
         id: GID(),
     }
-    li.innerHTML=nome.value+'-'+email.value+'-'+`${day}/${month}/${year} `;
+    li.innerHTML= `${nome.value}-${email.value}-${day}/${month}/${year}`;
     lista.appendChild(li);
     emailLS.push(Usuario);
     localStorage.setItem('Usuarios',JSON.stringify(emailLS));
@@ -42,11 +42,31 @@ function LimparLS(){
     localStorage.clear();
     document.getElementById("LCadastro").innerHTML = "";
 }
-
+function LimparPesquisado(){
+    var lista     = document.getElementById('LCadastro').getElementsByTagName('li');
+    for (var i = lista.length - 1; i >= 0; i--) {
+        if (!lista[i].classList.contains("hidden")) {
+            lista[i].remove();
+        }
+    }
+}
 function remover(){
     var lista = document.getElementById("LCadastro");
     var cadastro = document.getElementById("x");
     var y = document.getElementById(cadastro.value);
     lista.removeChild(y)
     localStorage.removeItem(y)
+}
+
+function pesquisa(campo){
+    var pesquisa  = campo.value.toLowerCase();
+    var lista     = document.getElementById('LCadastro').getElementsByTagName('li');
+    for (var i = 0; i < lista.length; i++) {
+        var texto = lista[i].textContent.toLowerCase();
+        if (texto.includes(pesquisa)) {
+            lista[i].classList.remove("hidden");
+        } else {
+            lista[i].classList.add("hidden");
+        }
+    }
 }
