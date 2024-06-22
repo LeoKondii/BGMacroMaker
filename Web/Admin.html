@@ -4,6 +4,7 @@
     <title>Login</title>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="icon" href="Imagens/favicon.ico" type="image/x-icon">
     <link rel="stylesheet" href="Style.css">
 </head>
 
@@ -51,13 +52,11 @@
         </div>
         
         <div id="containerLista" class="containerLista">
-            <input type="text" onkeyup="pesquisa(this)" id="pesquisa" style="border-radius: 5px;width: 30%;height: 2em;margin-top: 1%;margin-left: 10%;" placeholder="busca">
-            <button style="float: right;" onclick="LimparPesquisado()" class="login-cadastro-btn">Apagar Pesquisado</button>
+            <input type="text" onkeyup="pesquisa(this)" id="pesquisa" style="border-radius: 5px;width: 30%;height: 2em;margin-top: 1%;margin-left: 10%;" placeholder="N sei oq to fzendo">
+            <button style="float: right; padding-right: 18%;" onclick="LimparPesquisado()" class="login-cadastro-btn">Apagar Pesquisado</button>
             <button style="float: right;" onclick="LimparLS()" class="login-cadastro-btn">Apagar Lista</button>
 
-            <ul id="LCadastro">
-                <li>a-a@gmail.com-21/06/2024 </li>
-            </ul>
+            <ul id="LCadastro"></ul>
         </div>
             
     </div>
@@ -66,7 +65,7 @@
     
 
     <div id="footer">
-        <hr style="border-color: black; height: 0.2em;">
+        <hr style="color: transparent; border: none;"> 
         <p>Desenvolvido por Leonardo Conde e Matheus Shiune - <a href="https://moodle.utfpr.edu.br/pluginfile.php/3208131/mod_resource/content/1/Projeto%201%20-%20Programação%20Web%20Front-end.pdf"> Projeto 1 Front End </a></p>
         <p> <a href="https://www.utfpr.edu.br"> Universidade Tecnológica do Paraná </a> - Campus Cornélio Procópio</p>
         <p>Curso de Engenharia de Software - 2024</p>

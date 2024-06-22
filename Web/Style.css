@@ -35,9 +35,7 @@ a {
     margin-top: auto; 
     bottom: 0;
     position: fixed;
-    font-size: small;
     width:100%;
-    bottom: 0;
 }
 
 #logo {
@@ -73,9 +71,6 @@ a {
 .containerLista{
     position: relative;
     text-align: center;
-    /*display: flex; 
-    justify-content: center;*/
-    /*transform: translate(0%, 300%);*/
     margin-top: 2em;
 }
 .containerLista ul li{

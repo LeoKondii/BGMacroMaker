@@ -1,5 +1,4 @@
 let counter = 0;
-let emailLS = [];
 const lista = document.getElementById("LCadastro");
 const email = document.getElementById("emailADM");
 const nome = document.getElementById("nomeADM");
@@ -13,19 +12,28 @@ function addLista(){
     if(email.value ==='' || nome.value===''){
         alert("campos incompletos");
     }else{
-    let li = document.createElement("li");
-    let Usuario={
-        nomeUsuario: nomeADM.value,
-        emailUsuario: emailADM.value,
-        id: GID(),
-    }
-    li.innerHTML= `${nome.value}-${email.value}-${day}/${month}/${year}`;
-    lista.appendChild(li);
-    emailLS.push(Usuario);
-    localStorage.setItem('Usuarios',JSON.stringify(emailLS));
+        let li = document.createElement("li");
+        let Usuario={
+            nomeUsuario: nomeADM.value,
+            emailUsuario: emailADM.value,
+            id: GID(),
+        }
+        li.innerHTML= `${nome.value}-${email.value}-${day}/${month}/${year}`;
+        lista.appendChild(li);
+        let json = JSON.parse(localStorage.getItem("Usuarios")) || [];
+        json.push(Usuario);
+        localStorage.setItem('Usuarios',JSON.stringify(json));
     }
     email.value="";
     nome.value="";
+}
+function carregaLista(){
+    let json = JSON.parse(localStorage.getItem("Usuarios")) || [];
+    for( var i = 0; i<json.length; i++){
+        let li = document.createElement("li");
+        li.innerHTML= `${json[i].nomeUsuario}-${json[i].emailUsuario}`;
+        lista.appendChild(li);
+    }
 }
 
 function GID(){
@@ -48,28 +56,18 @@ function LimparPesquisado(){
     for (var i = lista.length - 1; i >= 0; i--) {
         if (!lista[i].classList.contains("hidden")) {
             var textoItem = lista[i].innerText.trim();
-
-            console.log(lista[i].textContent);
-
             lista[i].remove();
+
             var usuarios = JSON.parse(localStorage.getItem("Usuarios")) || [];
-            console.group('teste');
-            console.log(textoItem);
-            console.log(usuarios);
             usuarios = usuarios.filter(function(x){
                 var objItem = textoItem.split('-');
                 return !(objItem[0] == x.nomeUsuario && objItem[1] == x.emailUsuario)
             });
-            console.log(usuarios);
             localStorage.setItem("Usuarios", JSON.stringify(usuarios));
-            console.groupEnd();
-            
-                //pesquisaU = pesq.value;
-               // let filtered = emailLS.filter(emailLS.contains("pesquisaU"));
-            //localStorage.setItem("Usuarios", JSON.stringify(filtered));
         }
     }
     pesq.value="";
+    pesquisa(pesq);
 }
 
 
@@ -85,3 +83,5 @@ function pesquisa(campo){
         }
     }
 }
+
+carregaLista();
