@@ -44,13 +44,29 @@ function LimparLS(){
     pesq.value="";
 }
 function LimparPesquisado(){
-    var lista     = document.getElementById('LCadastro').getElementsByTagName('li');
+    var lista = document.getElementById('LCadastro').getElementsByTagName('li');
     for (var i = lista.length - 1; i >= 0; i--) {
         if (!lista[i].classList.contains("hidden")) {
+            var textoItem = lista[i].innerText.trim();
+
+            console.log(lista[i].textContent);
+
             lista[i].remove();
-                pesquisaU = pesq.value;
-                let filtered = emailLS.filter(emailLS.contains("pesquisaU"));
-                localStorage.setItem("Usuarios", JSON.stringify(filtered));
+            var usuarios = JSON.parse(localStorage.getItem("Usuarios")) || [];
+            console.group('teste');
+            console.log(textoItem);
+            console.log(usuarios);
+            usuarios = usuarios.filter(function(x){
+                var objItem = textoItem.split('-');
+                return !(objItem[0] == x.nomeUsuario && objItem[1] == x.emailUsuario)
+            });
+            console.log(usuarios);
+            localStorage.setItem("Usuarios", JSON.stringify(usuarios));
+            console.groupEnd();
+            
+                //pesquisaU = pesq.value;
+               // let filtered = emailLS.filter(emailLS.contains("pesquisaU"));
+            //localStorage.setItem("Usuarios", JSON.stringify(filtered));
         }
     }
     pesq.value="";
