@@ -3,6 +3,7 @@ body{
     font-size: 1em;
     color: white;
     margin: 0;
+    overflow-x: hidden;
 }
 
 a {
@@ -32,6 +33,13 @@ a {
     text-align: center;
     padding: 0.5em; 
     margin-top: auto; 
+    bottom: 0;
+    position: fixed;
+    font-size: small;
+
+/* teste */
+    width:100%;
+    bottom: 0;
 }
 
 #logo {
@@ -64,6 +72,17 @@ a {
     justify-content: center;
 }
 
+.containerAdm{
+    position: relative;
+    text-align: center;
+    /*display: flex; 
+    justify-content: center;*/
+    transform: translate(0%, 300%);
+}
+.containerLista{
+    position: relative;
+    transform: translate(39%, 700%);
+}
 .BGText {
     background: linear-gradient(to right, #fa794f, #f54374);
     display: inline;
@@ -177,12 +196,13 @@ a {
     border-width: 0.25em;
     border-style: solid;
     border-color: rgb(207, 199, 199);
-    position: absolute;
+    position: relative;
     padding: 1%;
 
     top: 50%;
     left: 50%;
-    transform: translate(-50%, -77%);
+    /*transform: translate(-50%, -77%);*/
+    transform:translate(-50%, 75%);
 }
 .checked {
     background: #888;

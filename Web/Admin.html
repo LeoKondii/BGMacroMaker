@@ -9,13 +9,13 @@
 
 <body>
 
-    
+
     <div id="header">
         <div class="container containerLogo"> 
             <a href="BGMacroMaker.html" id="logo">
                 <h1 class="BGText">BG </h1>
                 <h1 style="color: white;">MacroMaker</h1>
-                
+
                 <img style="width: 3em; height: 3em; margin-left: 0.25em; margin-bottom: 0.25em;" src="Imagens/MainFogo.png" alt="Ícone BGMacroMaker">
             </a>
         </div>
@@ -35,8 +35,7 @@
                 <button style="width: auto;" class="login-cadastro-btn">Admin</button>
             </form>
         </div>
-    </div> 
-
+    </div>
     <div id="mainCadLog">
         <div class="caixaLogar">
                 <label for="nomeADM">Nome</label><br>
@@ -50,12 +49,20 @@
                 </div>
             </form>
         </div>
+        <div id="containerAdm" class="containerAdm">
+            <input type="text" style="border-radius: 5px;width: 30%;height: 2em;margin-top: 1%;margin-left: 10%;" placeholder="N sei oq to fzendo">
+            <button style="float: right;" onclick="limpaLista()" class="login-cadastro-btn">Apagar Lista</button>
+            <button style="float: right;" onclick="limpaLista()" class="login-cadastro-btn">Apagar Lista</button>
+        </div>
+        <div class="containerLista">
+            <ul id="LCadastro">
+                <li>a-a@gmail.com-21/06/2024 </li>
+            </ul>
+        </div>
     </div>
-
-    <div>
-        <ul id="LCadastro">
-        </ul>
-    </div>
+    
+    <div style="clear: both;"></div>
+    
 
     <div id="footer">
         <hr style="border-color: black; height: 0.2em;">
@@ -64,7 +71,6 @@
         <p>Curso de Engenharia de Software - 2024</p>
         <p>Contato: <a href="mailto:leonardoconde@alunos.utfpr.edu.br?subject=Assunto&body=Corpo">leonardoconde@alunos.utfpr.edu.br</a></p>
     </div>
-
     <script src="Java.js"></script>
 </body>
 </html>
