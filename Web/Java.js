@@ -1,9 +1,9 @@
 let counter = 0;
-let nomesLS = [];
 let emailLS = [];
 const lista = document.getElementById("LCadastro");
 const email = document.getElementById("emailADM");
 const nome = document.getElementById("nomeADM");
+const pesq = document.getElementById("pesquisa");
 const date = new Date();
 const year = date.getFullYear();
 const month = String(date.getMonth() + 1).padStart(2, '0');
@@ -41,22 +41,21 @@ function limpaLista(){
 function LimparLS(){
     localStorage.clear();
     document.getElementById("LCadastro").innerHTML = "";
+    pesq.value="";
 }
 function LimparPesquisado(){
     var lista     = document.getElementById('LCadastro').getElementsByTagName('li');
     for (var i = lista.length - 1; i >= 0; i--) {
         if (!lista[i].classList.contains("hidden")) {
             lista[i].remove();
+                pesquisaU = pesq.value;
+                let filtered = emailLS.filter(emailLS.contains("pesquisaU"));
+                localStorage.setItem("Usuarios", JSON.stringify(filtered));
         }
     }
+    pesq.value="";
 }
-function remover(){
-    var lista = document.getElementById("LCadastro");
-    var cadastro = document.getElementById("x");
-    var y = document.getElementById(cadastro.value);
-    lista.removeChild(y)
-    localStorage.removeItem(y)
-}
+
 
 function pesquisa(campo){
     var pesquisa  = campo.value.toLowerCase();
