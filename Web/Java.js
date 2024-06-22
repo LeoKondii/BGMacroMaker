@@ -37,3 +37,16 @@ function limpaLista(){
     document.getElementById("nomeADM").value = "";
     document.getElementById("emailADM").value = "";
 }
+
+function LimparLS(){
+    localStorage.clear();
+    document.getElementById("LCadastro").innerHTML = "";
+}
+
+function remover(){
+    var lista = document.getElementById("LCadastro");
+    var cadastro = document.getElementById("x");
+    var y = document.getElementById(cadastro.value);
+    lista.removeChild(y)
+    localStorage.removeItem(y)
+}
